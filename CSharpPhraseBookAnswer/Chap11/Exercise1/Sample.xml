@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ballSports>
+    <ballsport>
+        <name chinese="籠球">농구</name>
+        <teammembers>5</teammembers>
+        <firstplayed>1891</firstplayed>
+    </ballsport>
+    <ballsport>
+        <name chinese="排球">배구</name>
+        <teammembers>6</teammembers>
+        <firstplayed>1895</firstplayed>
+    </ballsport>
+    <ballsport>
+        <name chinese="野球">야구</name>
+        <teammembers>9</teammembers>
+        <firstplayed>1846</firstplayed>
+    </ballsport>
+</ballSports>

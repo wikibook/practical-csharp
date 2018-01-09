@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- List 11-1 -->
+<novelists>
+  <novelist>
+    <name eng="Mark Twain">마크 트웨인</name>
+    <birth>1835-11-30</birth>
+    <death>1910-03-21</death>
+    <masterpieces>
+      <title>톰 소여의 모험</title>
+      <title>허클베리 핀의 모험</title>
+      <title>왕자와 거지</title>
+    </masterpieces>
+  </novelist>
+  <novelist>
+    <name eng="O. Henry">오 헨리</name>
+    <birth>1862-10-11</birth>
+    <death>1910-06-05</death>
+    <masterpieces>
+      <title>현자의 선물</title>
+      <title>마지막 잎새</title>
+    </masterpieces>
+  </novelist>
+  <novelist>
+    <name eng="Agatha Christie">아가사 크리스티</name>
+    <birth>1890-09-15</birth>
+    <death>1976-01-12</death>
+    <masterpieces>
+      <title>그리고 아무도 없었다</title>
+      <title>오리엔트 특급 살인</title>
+    </masterpieces>
+  </novelist>
+  <novelist>
+    <name eng="Ernest Hemingway">어니스트 헤밍웨이</name>
+    <birth>1899-07-21</birth>
+    <death>1961-07-02</death>
+    <masterpieces>
+      <title>무기여 잘 있거라</title>
+      <title>노인과 바다</title>
+    </masterpieces>
+  </novelist>
+  <novelist>
+    <name eng="Sidney Sheldon">시드니 셸던</name>
+    <birth>1917-02-11</birth>
+    <death>2007-01-30</death>
+    <masterpieces>
+      <title>게임의 여왕</title>
+      <title>천사의 분노</title>
+    </masterpieces>
+  </novelist>
+</novelists>

@@ -1,0 +1,20 @@
+﻿# # # 2-1-9 : 상수를 정의한다
+
+FeetConverter 클래스에는 0.3084라는 고정 숫자값이 두 번 나온다.
+const로 정의해서 0.3084라는 숫자값을 한 곳에 집약할 것이다.
+이렇게 하면 ratio를 참조하는 부분은 빌드했을 때 0.3084로 치환되어 코드 안에 들어간다
+
+
+# # # # # 코드2-10 : 상수를 도입한 FeetConverter 클래스
+
+    public static class FeetConverter {
+       private const double ratio = 0.3048;  〈←상수 ratio를 정의한다〉
+
+       public static double FromMeter(double meter) {
+          return meter / ratio;
+       }
+
+       public static double ToMeter(double feet) {
+          return feet * ratio;
+       }
+    }

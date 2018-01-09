@@ -1,0 +1,33 @@
+   1: using System;
+   2: using System.Collections.Generic;
+   3: using System.IO;
+   4: using System.Linq;
+   5: using System.Text;
+   6: using System.Threading.Tasks;
+   7: 
+   8: namespace Exercise2 {
+   9:     class Program {
+  10:         static void Main(string[] args) {
+  11:             if (args.Length == 0)
+  12:                 return;
+  13:             var file = args[0];
+  14:             var outputPath = Numbering(file);
+  15: 
+  16:             Display(outputPath);
+  17:         }
+  18: 
+  19:         private static string Numbering(string file) {
+  20:             var lines = File.ReadLines(file)
+  21:                             .Select((s, n) => string.Format("{0,4}: {1}", n+1, s));
+  22:             var path = Path.ChangeExtension(file, ".txt");
+  23:             File.WriteAllLines(path, lines);
+  24:             return path;
+  25:         }
+  26: 
+  27:         // 確認用コード
+  28:         private static void Display(string outputPath) {
+  29:             var text = File.ReadAllText(outputPath);
+  30:             Console.WriteLine(text);
+  31:         }
+  32:     }
+  33: }

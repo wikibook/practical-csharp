@@ -1,0 +1,1 @@
+C:\vsproj\CSharpPhraseBookAnswer\Chap01\Exercise2\bin\Debug\Exercise2.exe.config

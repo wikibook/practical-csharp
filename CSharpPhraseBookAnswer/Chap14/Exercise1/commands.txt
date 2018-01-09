@@ -1,0 +1,3 @@
+﻿notepad.exe|sample.txt
+sort.exe|sample.txt /O sample2.txt
+notepad.exe|sample2.txt

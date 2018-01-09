@@ -1,0 +1,99 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ch0408 {
+    class Program {
+        static void Main(string[] args) {
+            Sample01();
+            Sample02();
+            //Sample03();
+            Sample04();
+        }
+
+        static void Sample01() {
+            var a = 10;
+            var b = 20;
+            Console.WriteLine("{0} {1}", a, b);
+
+            var temp = a;
+            a = b;
+            b = temp;
+
+            Console.WriteLine("{0} {1}", a, b);
+        }
+
+        static void Sample02() {
+            var str = "123";
+
+            int height;
+            if (int.TryParse(str, out height)) {
+                // height에는 변환된 값이 들어 있다
+                Console.WriteLine(height);
+            } else {
+                // 변환하지 못함
+                Console.WriteLine("변환할 수 없습니다.");
+            }
+
+
+            //try {
+            //    int retryCount = int.Parse(str);
+            //    Console.WriteLine(retryCount);
+            //} catch (ArgumentNullException ex) {
+            //    Console.WriteLine("변환할 수 없습니다.");
+            //} catch (FormatException ex) {
+            //    Console.WriteLine("변환할 수 없습니다.");
+            //}
+
+        }
+
+        static void Sample03() {
+            try {
+                var lines = File.ReadAllLines("sample.txt");
+
+
+            } catch (FileNotFoundException ex) {
+                // 예외 정보를 사용한 어떤 처리
+                //……
+                throw;  //　　〈←예외를 다시 던진다〉 
+            }
+
+        }
+
+        static void Sample04() {
+            var filePath = "sample.txt";
+            using (var stream = new StreamReader(filePath)) { //　〈-StreamReader는 IDisposable 인터페이스를 구현했다 〉
+                var texts = stream.ReadToEnd();
+                // 읽어들인 데이터를 여기서 처리한다
+            }
+
+        }
+    }
+
+
+    class AppVersion {
+        public int Major { get; set; }
+        public int Minor { get; set; }
+        public int Build { get; set; }
+        public int Revision { get; set; }
+
+        public AppVersion(int major, int minor)
+          : this(major, minor, 0, 0) {  //〈-인수가 네 개인 생성자를 호출한다 〉
+      }
+
+        public AppVersion(int major, int minor, int revision)
+          : this(major, minor, revision, 0) {// 〈-인수가 네 개인 생성자를 호출한다 〉
+      }
+
+        public AppVersion(int major, int minor, int build, int revision) {
+            Major = major;
+            Minor = minor;
+            Build = build;
+            Revision = revision;
+        }
+
+    }
+}

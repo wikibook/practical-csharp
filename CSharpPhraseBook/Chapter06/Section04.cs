@@ -46,8 +46,8 @@ namespace Chapter06 {
 
         [ListNo("List 6-24")]
         public void All02WithLinq() {
-            bool is1000OrLess = books.All(x => x.Price <= 1000);
-            Console.WriteLine(is1000OrLess);
+            bool is10000OrLess = books.All(x => x.Price <= 10000);
+            Console.WriteLine(is10000OrLess);
         }
 
         [ListNo("List 6-25")]
